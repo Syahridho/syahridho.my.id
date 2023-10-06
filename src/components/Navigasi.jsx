@@ -14,9 +14,9 @@ const Navigasi = () => {
   let menuActive = menu ? "hamburger-active" : "";
   let linkNav = menu ? "" : "hidden";
   return (
-    <header className="w-full p-4 shadow-sm lg:shadow-none lg:h-[80vh] lg:w-60 xl:w-[330px] ">
+    <header className="w-full p-4 sticky top-0 z-10 bg-white  lg:h-screen lg:mt-10 shadow-sm lg:shadow-none lg:w-60 xl:w-[330px]">
       <div className="flex justify-between items-center">
-        <div className="flex items-center lg:flex-col">
+        <div className="flex items-center lg:flex-col lg:gap-8">
           {/* <img src="" alt="" className="bg-black-500 w-12 h-12" /> */}
           <div className="bg-neutral-200 w-8 h-8 block rounded-full me-4 lg:me-0 lg:mb-2 lg:w-24 lg:h-24"></div>
           <h1 className="font-medium">Syahridho Arjuna Syahputra</h1>
@@ -35,7 +35,7 @@ const Navigasi = () => {
           <li>
             <NavLink
               className={
-                "w-full py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
+                "w-full font-medium py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
               }
               to={"/"}
               onClick={handeClick}
@@ -46,7 +46,7 @@ const Navigasi = () => {
           <li>
             <NavLink
               className={
-                "w-full py-2  block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
+                "w-full font-medium py-2  block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
               }
               to={"/projects"}
               onClick={handeClick}
@@ -57,7 +57,7 @@ const Navigasi = () => {
           <li>
             <NavLink
               className={
-                "w-full py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
+                "w-full font-medium py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
               }
               to={"/certificates"}
               onClick={handeClick}
@@ -68,7 +68,7 @@ const Navigasi = () => {
           <li>
             <NavLink
               className={
-                "w-full py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
+                "w-full font-medium py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
               }
               to={"/contact"}
               onClick={handeClick}
@@ -105,7 +105,7 @@ const Navigasi = () => {
             </a>
           </li>
         </ul>
-        <div className="mt-8 text-center">
+        <div className="mt-20 text-center">
           <h5>&copy; 2023 by sas</h5>
         </div>
       </div>

@@ -9,7 +9,7 @@ import Navigasi from "../../../components/Navigasi";
 const App = () => {
   return (
     <Router>
-      <div className="flex flex-col lg:pt-10 lg:w-[1024px] xl:w-[1150px] lg:mx-auto lg:flex-row">
+      <div className="flex flex-col overflow-hidden lg:h-screen lg:w-[1024px] xl:w-[1150px] lg:mx-auto lg:flex-row">
         <Navigasi />
         <Routes>
           <Route path="/" exact element={<Home />} />

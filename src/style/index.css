@@ -23,3 +23,12 @@
 .hamburger-active > span:nth-child(1) {
   @apply -rotate-45;
 }
+
+#home::-webkit-scrollbar {
+  width: 0.5em;
+  background: transparent; /* Ganti dengan warna latar belakang yang sesuai */
+}
+
+#home::-webkit-scrollbar-thumb {
+  background: transparent; /* Ganti dengan warna latar belakang yang sesuai */
+}
