@@ -14,7 +14,7 @@ const Navigasi = () => {
   let menuActive = menu ? "hamburger-active" : "";
   let linkNav = menu ? "" : "hidden";
   return (
-    <header className="w-full p-4 sticky top-0 z-10 bg-white  lg:h-screen lg:mt-10 shadow-sm lg:shadow-none lg:w-60 xl:w-[330px]">
+    <header className="w-full p-4 bg-white sticky top-0 z-10 lg:h-screen lg:pt-10 shadow-sm lg:shadow-none lg:w-60 xl:w-[330px]">
       <div className="flex justify-between items-center">
         <div className="flex items-center lg:flex-col lg:gap-8">
           {/* <img src="" alt="" className="bg-black-500 w-12 h-12" /> */}

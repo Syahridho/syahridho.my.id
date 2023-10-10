@@ -5,20 +5,23 @@ import Certificates from "../Certificates";
 import Contact from "../Contact";
 import NotFound from "../NotFound";
 import Navigasi from "../../../components/Navigasi";
+import Detail from "../Projects/Detail";
+import { Provider } from "react-redux";
+import storeRedux from "../../../config/redux/store";
 
 const App = () => {
   return (
     <Router>
-      <div className="flex flex-col overflow-hidden lg:h-screen lg:w-[1024px] xl:w-[1150px] lg:mx-auto lg:flex-row">
-        <Navigasi />
+      <Provider store={storeRedux}>
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects/:id" element={<Detail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </div>
+      </Provider>
     </Router>
   );
 };
