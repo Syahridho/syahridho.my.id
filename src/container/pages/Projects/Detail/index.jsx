@@ -1,7 +1,9 @@
 import { connect } from "react-redux";
 import { Component } from "react";
-import { projectsData } from "./../../../../utils";
+import projectsData from "./../../../../utils/Projects";
 import { Link } from "react-router-dom";
+import CodePaste from "../../../../components/codePaste";
+import ShowButton from "../../../../components/ShowButton";
 
 // react icons
 import { BiLeftArrowCircle } from "react-icons/bi";
@@ -25,8 +27,8 @@ class Detail extends Component {
 
   render() {
     return (
-      <div className="mx-8 lg:h-screen lg:w-[1024px] xl:w-[1150px] lg:mx-auto ">
-        <div className="w-full h-[1000px]  lg:py-8 lg:mt-10">
+      <div className="mx-8 lg:px-10 lg:w-[800px] xl:w-[900px] lg:mx-auto ">
+        <div className="w-full h-[1000px]  lg:mt-10">
           <div className="pt-5 pb-10 bg-white">
             <Link
               to={"/projects"}
@@ -41,12 +43,23 @@ class Detail extends Component {
               <img
                 src={this.state.select.img}
                 alt=""
-                className="rounded-md shadow transition duration-500 hover:scale-110"
+                className="mx-auto w-11/12 rounded-md shadow transition duration-500 sm:w-2/3  hover:scale-110"
               />
             </div>
-            <h1 className="mt-6 text-xl font-semibold">
+            <h1 className="mt-6 text-2xl font-medium">
               {this.state.select.title}
             </h1>
+
+            <p>web ini saya mengguakan figma dan beberapa tambahan </p>
+          </div>
+          <div>
+            <CodePaste code={"npm run dev"} />
+          </div>
+          <div className="mt-10 flex justify-end">
+            <ShowButton
+              title="See Project"
+              link={"https://tailwind-hl.syahridhoas.repl.co"}
+            />
           </div>
         </div>
       </div>

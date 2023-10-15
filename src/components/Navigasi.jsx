@@ -2,7 +2,12 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 // react icons
-import { AiOutlineMail, AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
+import {
+  AiOutlineHome,
+  AiOutlineMail,
+  AiOutlineGithub,
+  AiFillLinkedin,
+} from "react-icons/ai";
 
 const Navigasi = () => {
   const [menu, setMenu] = useState(false);
@@ -14,7 +19,7 @@ const Navigasi = () => {
   let menuActive = menu ? "hamburger-active" : "";
   let linkNav = menu ? "" : "hidden";
   return (
-    <header className="w-full p-4 bg-white sticky top-0 z-10 lg:h-screen lg:pt-10 shadow-sm lg:shadow-none lg:w-60 xl:w-[330px]">
+    <header className="w-full p-4 bg-white sticky top-0 z-10 lg:h-screen lg:pt-10 xl:pt-16 shadow-sm lg:shadow-none lg:w-60 xl:w-[330px]">
       <div className="flex justify-between items-center">
         <div className="flex items-center lg:flex-col lg:gap-8">
           {/* <img src="" alt="" className="bg-black-500 w-12 h-12" /> */}
@@ -35,7 +40,7 @@ const Navigasi = () => {
           <li>
             <NavLink
               className={
-                "w-full font-medium py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
+                "w-full font-medium py-2 block items-center gap-4 text-slate-800 text-center rounded transition duration-500 hover:bg-slate-800 hover:text-white lg:text-start lg:ps-2"
               }
               to={"/"}
               onClick={handeClick}
@@ -46,7 +51,7 @@ const Navigasi = () => {
           <li>
             <NavLink
               className={
-                "w-full font-medium py-2  block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
+                "w-full font-medium py-2  block text-slate-800 text-center rounded transition duration-500 hover:bg-slate-800 hover:text-white lg:text-start lg:ps-2"
               }
               to={"/projects"}
               onClick={handeClick}
@@ -57,7 +62,7 @@ const Navigasi = () => {
           <li>
             <NavLink
               className={
-                "w-full font-medium py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
+                "w-full font-medium py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-slate-800 hover:text-white lg:text-start lg:ps-2"
               }
               to={"/certificates"}
               onClick={handeClick}
@@ -68,7 +73,7 @@ const Navigasi = () => {
           <li>
             <NavLink
               className={
-                "w-full font-medium py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-neutral-200 lg:text-start lg:ps-2"
+                "w-full font-medium py-2 block text-slate-800 text-center rounded transition duration-500 hover:bg-slate-800 hover:text-white lg:text-start lg:ps-2"
               }
               to={"/contact"}
               onClick={handeClick}

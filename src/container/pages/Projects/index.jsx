@@ -1,4 +1,4 @@
-import { projectsData } from "./../../../utils/index";
+import projectsData from "./../../../utils/Projects/index.js";
 import Navigasi from "../../../components/Navigasi";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";

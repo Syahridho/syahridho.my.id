@@ -1,7 +1,4 @@
-import gambar from "./../assets/projects/uiShoes.webp";
-
-// import { IoLogoFirebase } from "react-icons/io5";
-// import { BiLogoTailwindCss } from "react-icons/bi";
+import gambar from "./../../assets/projects/uiMusic.webp";
 
 const projectsData = () => [
   {
@@ -26,4 +23,4 @@ const projectsData = () => [
   },
 ];
 
-export { projectsData };
+export default projectsData;

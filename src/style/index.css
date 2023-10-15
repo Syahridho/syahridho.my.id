@@ -5,7 +5,11 @@
 @tailwind utilities;
 
 .active {
-  @apply bg-neutral-200;
+  @apply bg-slate-800 text-white;
+}
+
+.active-certi {
+  @apply text-white bg-slate-800;
 }
 
 .hamburger-line {
