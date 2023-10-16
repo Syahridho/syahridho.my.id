@@ -24,7 +24,7 @@ class CertificateList extends Component {
               key={index}
               className="rounded overflow-hidden border border-slate-500"
             >
-              <img src={selectedCertificate[key]} alt="" />
+              <img loading="lazy" src={selectedCertificate[key]} alt="" />
             </div>
           );
         })}

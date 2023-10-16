@@ -18,6 +18,7 @@ class Detail extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     const selectData = this.state.datas[this.props.detail - 1];
     this.setState({
       ...this.state,
@@ -50,17 +51,23 @@ class Detail extends Component {
               {this.state.select.title}
             </h1>
 
-            <p>web ini saya mengguakan figma dan beberapa tambahan </p>
+            <p>{this.state.select.desc}</p>
           </div>
-          <div>
-            <CodePaste code={"npm run dev"} />
-          </div>
-          <div className="mt-10 flex justify-end">
-            <ShowButton
-              title="See Project"
-              link={"https://tailwind-hl.syahridhoas.repl.co"}
-            />
-          </div>
+          {this.state.select.git ? (
+            <div className="my-10">
+              <h1 className="font-semibold">Git Clone</h1>
+              <CodePaste code={this.state.select.git} />
+            </div>
+          ) : (
+            <></>
+          )}
+          {this.state.select.link ? (
+            <div className="mt-10 flex justify-end">
+              <ShowButton title="See Project" link={this.state.select.link} />
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     );

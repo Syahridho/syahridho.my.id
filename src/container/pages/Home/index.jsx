@@ -13,8 +13,12 @@ import {
 import { IoLogoFirebase } from "react-icons/io5";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { TbBrandVscode } from "react-icons/tb";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="flex flex-col lg:h-[1000px] lg:w-[1024px] xl:w-[1150px] lg:mx-auto lg:flex-row">
       <Navigasi />

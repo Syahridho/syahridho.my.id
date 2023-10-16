@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import CardProject from "./../../../components/CardProject";
+import { useEffect } from "react";
 
 const Projects = () => {
   const [datas, setDatas] = useState(projectsData());
@@ -16,6 +17,10 @@ const Projects = () => {
     navigate(`/projects/${id}`);
     dispatch({ type: "UPDATE_DETAIL", detail: id });
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="flex flex-col lg:w-[1024px] xl:w-[1150px] lg:mx-auto lg:flex-row">

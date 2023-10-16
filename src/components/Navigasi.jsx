@@ -2,12 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 // react icons
-import {
-  AiOutlineHome,
-  AiOutlineMail,
-  AiOutlineGithub,
-  AiFillLinkedin,
-} from "react-icons/ai";
+import { AiOutlineMail, AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Navigasi = () => {
   const [menu, setMenu] = useState(false);
@@ -22,8 +17,11 @@ const Navigasi = () => {
     <header className="w-full p-4 bg-white sticky top-0 z-10 lg:h-screen lg:pt-10 xl:pt-16 shadow-sm lg:shadow-none lg:w-60 xl:w-[330px]">
       <div className="flex justify-between items-center">
         <div className="flex items-center lg:flex-col lg:gap-8">
-          {/* <img src="" alt="" className="bg-black-500 w-12 h-12" /> */}
-          <div className="bg-neutral-200 w-8 h-8 block rounded-full me-4 lg:me-0 lg:mb-2 lg:w-24 lg:h-24"></div>
+          <img
+            src="https://media.licdn.com/dms/image/D5603AQGnSxWHL1goxA/profile-displayphoto-shrink_100_100/0/1693581426597?e=1703116800&v=beta&t=YQo26-jDkh4VLlmNKpyMqUU-HO5YqoJYRPQ7ItI0D6k"
+            alt=""
+            className="w-8 h-8 block rounded-full me-4 lg:me-0 lg:mb-2 lg:w-24 lg:h-24"
+          />
           <h1 className="font-medium">Syahridho Arjuna Syahputra</h1>
         </div>
         <div className="lg:hidden">
@@ -35,7 +33,7 @@ const Navigasi = () => {
         </div>
       </div>
       <hr className="my-6 hidden lg:block" />
-      <div className={`mt-5 ${linkNav} lg:block`}>
+      <div className={`mt-5 ${linkNav} h-[88vh] lg:block`}>
         <ul className="flex flex-col gap-2">
           <li>
             <NavLink
@@ -87,7 +85,9 @@ const Navigasi = () => {
         <ul className="flex justify-center gap-4">
           <li>
             <a
-              href="#"
+              href="mailto:syahridhosyahputra@gmail.com"
+              target="blank"
+              rel="noopener noreferrer"
               className="w-full text-neutral-800 block p-2 rounded-full border border-neutral-500 transition duration-500 hover:bg-slate-800 hover:text-white"
             >
               <AiOutlineMail />
@@ -95,7 +95,9 @@ const Navigasi = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="https://github.com/Syahridho"
+              target="blank"
+              rel="noopener noreferrer"
               className="w-full text-neutral-800 block p-2 rounded-full border border-neutral-500 transition duration-500 hover:bg-slate-800 hover:text-white"
             >
               <AiOutlineGithub />
@@ -103,7 +105,9 @@ const Navigasi = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/syahridho"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full text-neutral-800 block p-2 rounded-full border border-neutral-500 transition duration-500 hover:bg-slate-800 hover:text-white"
             >
               <AiFillLinkedin />

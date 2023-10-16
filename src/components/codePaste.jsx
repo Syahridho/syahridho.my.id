@@ -14,7 +14,7 @@ const CodePaste = ({ code }) => {
   };
   return (
     <div className="bg-stone-800 text-white rounded flex items-center justify-between py-2 px-5 font-mono">
-      <span className="codeToCopy">{code}</span>
+      <span className="codeToCopy">git clone {code}</span>
       <button
         className="border border-white rounded hover:bg-white hover:text-stone-900 p-2"
         onClick={handleCopy}
