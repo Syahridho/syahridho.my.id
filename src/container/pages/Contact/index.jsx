@@ -1,10 +1,33 @@
 import Navigasi from "../../../components/Navigasi";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    request: "",
+  });
+
+  const { name, email, request } = form;
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(form);
+    setForm({
+      name: "",
+      email: "",
+      request: "",
+    });
+    alert("Pesan Berhasil Dikirim");
+  };
+
   return (
     <div className="flex flex-col lg:w-[1024px] xl:w-[1150px] lg:mx-auto lg:flex-row">
       <Navigasi />
@@ -21,6 +44,8 @@ const Contact = () => {
               name="name"
               id="name"
               placeholder="Your name"
+              onChange={handleChange}
+              value={name}
             />
             <label htmlFor="email">Email</label>
             <input
@@ -29,6 +54,8 @@ const Contact = () => {
               name="email"
               id="name"
               placeholder="Your email"
+              onChange={handleChange}
+              value={email}
             />
             <label htmlFor="request">Request</label>
             <textarea
@@ -38,8 +65,13 @@ const Contact = () => {
               cols="20"
               rows="5"
               placeholder="Your request"
+              onChange={handleChange}
+              value={request}
             ></textarea>
-            <button className="text-white bg-slate-800 py-2 rounded shadow">
+            <button
+              className="text-white bg-slate-800 py-2 rounded shadow"
+              onClick={handleSubmit}
+            >
               Submit
             </button>
           </form>
